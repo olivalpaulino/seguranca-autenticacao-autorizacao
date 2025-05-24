@@ -1,4 +1,4 @@
-package config;
+package dobackaofront.seguranca_autenticacao_autorizacao.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,7 +10,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import service.UserDetailsServiceImpl;
+import dobackaofront.seguranca_autenticacao_autorizacao.service.UserDetailsServiceImpl;
 
 @Configuration
 @EnableWebSecurity

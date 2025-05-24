@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <meta charset="UTF-8" />
+    <title>Home - Spring Security Demo</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" /> <!-- se houver CSS -->
+</head>
+<body>
+<h1>Bem-vindo!</h1>
+
+<p>Este é um site de exemplo com segurança Spring Security.</p>
+
+<!-- Menu de navegação -->
+<nav>
+    <a th:href="@{/}">Início</a>
+    <!-- Link de login aparece só para usuários não autenticados -->
+    <a th:href="@{/login}" sec:authorize="!isAuthenticated()">Login</a>
+    <!-- Links que aparecem apenas para usuários autenticados -->
+    <span sec:authorize="isAuthenticated()">
+            <!-- Saudação ao usuário logado -->
+            Olá, <span sec:authentication="name">Usuário</span>!
+        <!-- Link de logout -->
+            <form th:action="@{/logout}" method="post" style="display:inline">
+                <button type="submit">Sair</button>
+            </form>
+        <!-- Links condicionais por role -->
+            <a th:href="@{/user}" sec:authorize="hasRole('USER')">Área do Usuário</a>
+            <a th:href="@{/admin}" sec:authorize="hasRole('ADMIN')">Área do Admin</a>
+        </span>
+</nav>
+
+<hr/>
+<div>
+    <p>Use as credenciais abaixo para testar o acesso restrito:</p>
+    <ul>
+        <li><strong>Usuário comum:</strong> login <code>user</code>, senha <code>1234</code></li>
+        <li><strong>Administrador:</strong> login <code>admin</code>, senha <code>1234</code></li>
+    </ul>
+    <p>Caso esteja logado, acesse as páginas restritas pelos links acima.</p>
+</div>
+</body>
+</html>

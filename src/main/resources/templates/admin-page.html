@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+  <meta charset="UTF-8" />
+  <title>Área do Administrador</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+<h2>Área do Administrador</h2>
+<p>Olá, <span sec:authentication="name"></span>! Você tem acesso de <b>ADMIN</b>.</p>
+
+<p>Roles/authorities do seu usuário:
+  <span sec:authentication="authorities"></span>
+</p>
+
+<ul>
+  <li>Aqui você poderia listar funcionalidades administrativas.</li>
+  <li>Por exemplo, gerenciamento de usuários, relatórios, etc.</li>
+</ul>
+
+<p><a th:href="@{/}">Voltar para Home</a></p>
+</body>
+</html>

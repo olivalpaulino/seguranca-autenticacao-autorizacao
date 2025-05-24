@@ -1,14 +1,14 @@
-package service;
+package dobackaofront.seguranca_autenticacao_autorizacao.service;
 
-import entity.Role;
-import entity.User;
+import dobackaofront.seguranca_autenticacao_autorizacao.entity.Role;
+import dobackaofront.seguranca_autenticacao_autorizacao.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import repository.UserRepository;
+import dobackaofront.seguranca_autenticacao_autorizacao.repository.UserRepository;
 
 import java.util.stream.Collectors;
 

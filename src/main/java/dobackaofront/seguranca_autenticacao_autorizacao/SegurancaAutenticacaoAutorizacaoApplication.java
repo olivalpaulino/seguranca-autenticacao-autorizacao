@@ -1,14 +1,14 @@
 package dobackaofront.seguranca_autenticacao_autorizacao;
 
-import entity.Role;
-import entity.User;
+import dobackaofront.seguranca_autenticacao_autorizacao.entity.Role;
+import dobackaofront.seguranca_autenticacao_autorizacao.entity.User;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import repository.RoleRepository;
-import repository.UserRepository;
+import dobackaofront.seguranca_autenticacao_autorizacao.repository.RoleRepository;
+import dobackaofront.seguranca_autenticacao_autorizacao.repository.UserRepository;
 
 import java.util.Set;
 

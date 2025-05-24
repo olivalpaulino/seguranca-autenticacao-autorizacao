@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+  <meta charset="UTF-8" />
+  <title>Área do Usuário</title>
+  <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+<h2>Área do Usuário</h2>
+<p>Bem-vindo, <span sec:authentication="name"></span>! Esta página é acessível a usuários logados com o perfil <b>USER</b>.</p>
+
+<p>Você está logado com as seguintes roles/permissões:
+  <span sec:authentication="authorities"></span>
+</p>
+
+<p><a th:href="@{/}">Voltar para Home</a></p>
+</body>
+</html>

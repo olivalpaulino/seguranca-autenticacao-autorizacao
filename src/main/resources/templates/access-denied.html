@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Acesso Negado</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+<h2>Acesso Negado</h2>
+<p th:text="${msg}">
+    Você não tem permissão para acessar esta página.
+</p>
+<p><a th:href="@{/}">Voltar para Home</a></p>
+</body>
+</html>

@@ -1,4 +1,4 @@
-package entity;
+package dobackaofront.seguranca_autenticacao_autorizacao.entity;
 
 import jakarta.persistence.*;
 import java.util.HashSet;

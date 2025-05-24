@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login - Spring Security Demo</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+<h2>Login</h2>
+
+<form th:action="@{/login}" method="post">
+    <div>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" />
+    </div>
+    <div>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" />
+    </div>
+    <!-- Campo hidden para CSRF (se CSRF estivesse habilitado, mas como desabilitamos, não é necessário) -->
+    <!-- <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" /> -->
+    <div>
+        <button type="submit">Entrar</button>
+    </div>
+</form>
+
+<!-- Mensagens de feedback -->
+<div style="color:red;">
+    <!-- Mensagem de erro de login -->
+    <p th:if="${param.error}" >Usuário ou senha incorretos.</p>
+</div>
+<div style="color:green;">
+    <!-- Mensagem de logout com sucesso -->
+    <p th:if="${param.logout}" >Você saiu da sessão com sucesso.</p>
+</div>
+
+<p><a th:href="@{/}">← Voltar para a página inicial</a></p>
+</body>
+</html>
