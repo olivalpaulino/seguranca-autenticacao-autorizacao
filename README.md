@@ -69,7 +69,7 @@ src/
 1. Clone o repositório:
 
    ```bash
-   git clone [https://github.com/olivalpaulino/seguranca-autenticacao-autorizacao.git](https://github.com/olivalpaulino/seguranca-autenticacao-autorizacao.git)
+   git clone https://github.com/olivalpaulino/seguranca-autenticacao-autorizacao.git
    cd seguranca-autenticacao-autorizacao
 2. Acesse a pasta do projeto com Intellij
 3. Espere baixar as dependências com Maven
